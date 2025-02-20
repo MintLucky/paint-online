@@ -1,0 +1,9 @@
+@import 'variables';
+@import 'css-reset';
+
+.app {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  background-color: $bg-color;
+}
