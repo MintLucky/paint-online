@@ -1,5 +1,5 @@
-# Painting online app . The project is under development
-
+# Painting online app
+## The project is under development
 ## With this app you can paint online with others
 
 ## Tech stack: React, Canvas, WebSocket, SCSS, NodeJS, Express
