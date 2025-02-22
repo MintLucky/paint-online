@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 @mixin toolbar {
   height: $toolbar-height;
@@ -21,29 +21,29 @@
   }
 
   .brush {
-    background: url('../assets/img/brush.png') no-repeat center;
+    background: url("../assets/img/brush.png") no-repeat center;
   }
   .rect {
-    background: url('../assets/img/rect.png') no-repeat center center;
+    background: url("../assets/img/rect.png") no-repeat center center;
   }
   .circle {
-    background: url('../assets/img/circle.png') no-repeat center center;
+    background: url("../assets/img/circle.png") no-repeat center center;
   }
   .eraser {
-    background: url('../assets/img/eraser.png') no-repeat center center;
+    background: url("../assets/img/eraser.png") no-repeat center center;
   }
   .line {
-    background: url('../assets/img/line.png') no-repeat center center;
+    background: url("../assets/img/line.png") no-repeat center center;
   }
   .undo {
     margin-left: auto;
-    background: url('../assets/img/undo.png') no-repeat center center;
+    background: url("../assets/img/undo.png") no-repeat center center;
   }
   .redo {
-    background: url('../assets/img/redo.png') no-repeat center center;
+    background: url("../assets/img/redo.png") no-repeat center center;
   }
   .save {
-    background: url('../assets/img/save.png') no-repeat center center;
+    background: url("../assets/img/save.png") no-repeat center center;
     margin-right: 10px;
   }
 }

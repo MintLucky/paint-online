@@ -13,14 +13,16 @@ export default class Circle extends Tool {
   }
 
   distanceTo(point1, point2) {
-    return Math.sqrt((Math.pow(point2.x-point1.x,2))+(Math.pow(point2.y-point1.y,2)))
-  };
+    return Math.sqrt(
+      Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2),
+    );
+  }
 
   mouseUpHandler(e) {
     this.mouseDown = false;
   }
 
-  mouseDownHandler(e) { 
+  mouseDownHandler(e) {
     this.mouseDown = true;
     this.ctx.beginPath();
     this.startX = e.pageX - e.target.offsetLeft;
@@ -32,7 +34,10 @@ export default class Circle extends Tool {
     if (this.mouseDown) {
       let currentX = e.pageX - e.target.offsetLeft;
       let currentY = e.pageY - e.target.offsetTop;
-      let radius = this.distanceTo({x: this.startX, y: this.startY}, {x: currentX, y: currentY});
+      let radius = this.distanceTo(
+        { x: this.startX, y: this.startY },
+        { x: currentX, y: currentY },
+      );
       this.draw(this.startX, this.startY, radius);
     }
   }
@@ -47,6 +52,6 @@ export default class Circle extends Tool {
       this.ctx.arc(x, y, r, 0, Math.PI * 2);
       this.ctx.fill();
       this.ctx.stroke();
-    }
+    };
   }
 }

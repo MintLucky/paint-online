@@ -13,34 +13,40 @@ export default class Brush extends Tool {
   }
 
   mouseUpHandler(e) {
-    this.mouseDown = false
-    this.socket.send(JSON.stringify({
-        method: 'draw',
+    this.mouseDown = false;
+    this.socket.send(
+      JSON.stringify({
+        method: "draw",
         id: this.id,
         figure: {
-            type: 'finish',
-        }
-    }))
-}
+          type: "finish",
+        },
+      }),
+    );
+  }
 
-  mouseDownHandler(e) { 
+  mouseDownHandler(e) {
     this.mouseDown = true;
     this.ctx.beginPath();
-    this.ctx.moveTo(e.pageX - e.target.offsetLeft, e.pageY - e.target.offsetTop); 
+    this.ctx.moveTo(
+      e.pageX - e.target.offsetLeft,
+      e.pageY - e.target.offsetTop,
+    );
   }
 
   mouseMoveHandler(e) {
     if (this.mouseDown) {
-      this.socket.send(JSON.stringify({
-        method: "draw",
-        id: this.id,
-        figure: {
-          type: "brush",
-          x: e.pageX - e.target.offsetLeft,
-          y: e.pageY - e.target.offsetTop
-        }
-
-      }))
+      this.socket.send(
+        JSON.stringify({
+          method: "draw",
+          id: this.id,
+          figure: {
+            type: "brush",
+            x: e.pageX - e.target.offsetLeft,
+            y: e.pageY - e.target.offsetTop,
+          },
+        }),
+      );
     }
   }
 

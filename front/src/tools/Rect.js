@@ -16,7 +16,7 @@ export default class Rect extends Tool {
     this.mouseDown = false;
   }
 
-  mouseDownHandler(e) { 
+  mouseDownHandler(e) {
     this.mouseDown = true;
     this.ctx.beginPath();
     this.startX = e.pageX - e.target.offsetLeft;
@@ -44,6 +44,6 @@ export default class Rect extends Tool {
       this.ctx.rect(x, y, w, h);
       this.ctx.fill();
       this.ctx.stroke();
-    }
+    };
   }
 }
